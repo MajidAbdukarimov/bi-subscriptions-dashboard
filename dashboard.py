@@ -49,6 +49,19 @@ st.markdown(f"""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* ── Sidebar always open ──────────────────────────────────────────────── */
+section[data-testid="stSidebar"] {{
+    min-width: 310px !important;
+    transform: none !important;
+    box-shadow: 4px 0 24px rgba(0,0,0,0.04);
+}}
+button[data-testid="stBaseButton-headerNoPadding"] {{
+    display: none !important;
+}}
+[data-testid="collapsedControl"] {{
+    display: none !important;
+}}
+
 :root {{
     --bg:       {BG};
     --card:     {CARD};
@@ -239,6 +252,7 @@ h3 {{
 #MainMenu, footer, header {{visibility: hidden;}}
 </style>
 """, unsafe_allow_html=True)
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────
