@@ -294,7 +294,7 @@ with st.sidebar:
     st.markdown('<div class="sidebar-section">Период</div>',
                 unsafe_allow_html=True)
     d_from = st.date_input("С", value=date(2025, 4, 25))
-    d_to   = st.date_input("По", value=date(2025, 12, 23))
+    d_to   = st.date_input("По", value=date.today())
 
     if st.button("Обновить", use_container_width=True):
         st.cache_data.clear()
